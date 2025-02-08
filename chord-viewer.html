@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chord Viewer (PyScript Version)</title>
+    
+    <!-- Include PyScript -->
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css">
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <link rel="stylesheet" href="chord_styles.css">
+    <script defer src="chord_script.js"></script>
+    
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        input, button { margin: 10px; padding: 10px; }
+        img { max-width: 300px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Chord Viewer (Web Version)</h1>
+
+    <!-- Upload Image -->
+    <h2>Upload an Image</h2>
+    <input type="text" id="file_name" placeholder="Enter file name">
+    <input type="file" id="file_input">
+    <button onclick="uploadImage()">Upload</button>
+
+    <!-- Search Image -->
+    <h2>Search for an Image</h2>
+    <input type="text" id="search_name" placeholder="Enter file name to search">
+    <button onclick="searchImage()">Search</button>
+
+    <!-- Display Image -->
+    <h2>Image Preview</h2>
+    <img id="image_preview" style="display: none;">
+
+    <script>
+        function uploadImage() {
+            let fileInput = document.getElementById("file_input");
+            let fileName = document.getElementById("file_name").value.trim();
+
+            if (!fileName || fileInput.files.length === 0) {
+                alert("Please enter a file name and select an image.");
+                return;
+            }
+
+            let file = fileInput.files[0];
+            let reader = new FileReader();
+
+            reader.onload = function(event) {
+                let dataUrl = event.target.result;
+                localStorage.setItem(fileName, dataUrl);
+                alert("Image uploaded successfully!");
+                fileInput.value = "";
+                document.getElementById("file_name").value = "";
+            };
+
+            reader.readAsDataURL(file);
+        }
+
+        function searchImage() {
+            let searchName = document.getElementById("search_name").value.trim();
+            let imageData = localStorage.getItem(searchName);
+
+            if (imageData) {
+                let img = document.getElementById("image_preview");
+                img.src = imageData;
+                img.style.display = "block";
+                document.getElementById("search_name").value = "";
+            } else {
+                alert("Image not found.");
+            }
+        }
+    </script>
+
+</body>
+</html>
