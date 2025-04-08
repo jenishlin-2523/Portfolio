@@ -8,51 +8,56 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Jenishlin Brisho M</h1>
+    <header>    
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>   
+        <h1>Jenishlin Brisho M</h1>         
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#other-projects">VFX & 3d Rendering</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><button id="theme-toggle">🌙</button></li>
             </ul>
         </nav>
     </header>
+    <script>
+        function setupHamburgerMenu(toggleId, navId) {
+          const menuToggle = document.getElementById(toggleId);
+          const navbar = document.getElementById(navId).querySelector('ul');
+    
+          if (menuToggle && navbar) {
+            menuToggle.addEventListener('click', () => {
+              navbar.classList.toggle('show');
+            });
+          }
+        }
+    
+        document.addEventListener('DOMContentLoaded', function () {
+          setupHamburgerMenu('menu-toggle', 'navbar');
+        });
+      </script>
 
     <section id="home">
         <h2>Welcome to My Portfolio</h2>
-        <h3>I am a passionate 3d model Designer and a Full Stack Developer working on basic projects.</h3>
+        <p>I am a passionate AI & Data Science student and a developer working on simple projects.</p>
     </section>
 
     <section id="projects">
         <h2>Projects</h2>
         <div class="project-container">
             <div class="project-card">
-                <img src="logos/project1.png" alt="Project 1">
+                <img src="project1.png" alt="Project 1">
                 <h3>Chord Viewer App</h3>
                 <p>A mobile app to rename and search images efficiently.</p>
-                <a href="chord-viewer.html" class="btn">View Project</a>
-                <p></p>
-                <a href="https://docs.google.com/document/d/1EVitZhTB2w1FNOfHWeQrzrYE16umHV0e3nDQrPl7t0I/edit?usp=sharing" target="_blank">
-                    Open Documentation
-                </a>
-                
-
+                <a href="chord-viewer.html" class="btn">View Details</a>
             </div>
             <div class="project-card">
-                <img src="logos/project2.png" alt="Project 2">
+                <img src="project2.png" alt="Project 2">
                 <h3>Loan Management System</h3>
                 <p>Flask-based end-to-end loan management system with React.js frontend.</p>
                 <a href="loan-management.html" class="btn">View Details</a>
-                <p></p>
-                <a href="                                 " target="_blank">
-                    Open Documentation
-                </a>
             </div>
-            
         </div>
     </section>
 
@@ -60,44 +65,20 @@
         <h2>Skills</h2>
         <div class="skills-container">
             <div class="skill">
-                <img src="logos/pythonlogo.png" alt="Python">
+                <img src="pythonlogo.png" alt="Python">
                 <p>Python</p>
             </div>
             <div class="skill">
-                <img src="logos/htmllogo.png" alt="HTML">
+                <img src="htmllogo.png" alt="HTML">
                 <p>HTML, CSS, JavaScript</p>
             </div>
             <div class="skill">
-                <img src="logos/phplogo.png" alt="PHP">
+                <img src="phplogo.png" alt="PHP">
                 <p>PHP</p>
             </div>
             <div class="skill">
-                <img src="logos/blenderlogo.png" alt="Blender">
+                <img src="blenderlogo.png" alt="Blender">
                 <p>Blender | 3d models</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="other-projects">
-        <h2>VFX & 3d Rendering</h2>
-        <div class="other-projects-container">
-            <div class="other-project-card">
-                <video src="videos/vid1.mkv" autoplay loop muted></video>
-            </div>
-            <div class="other-project-card">
-                <video src="videos/vid2.mkv" autoplay loop muted></video>
-            </div>
-            <div class="other-project-card">
-                <video src="videos/vid3.mp4" autoplay loop muted></video>
-            </div>
-            <div class="other-project-card">
-                <video src="videos/vid4.mp4" autoplay loop muted></video>
-            </div>
-            <div class="other-project-card">
-                <video src="videos/vid5.mp4" autoplay loop muted></video>
-            </div>
-            <div class="other-project-card">
-                <video src="videos/vid6.mp4" autoplay loop muted></video>
             </div>
         </div>
     </section>
@@ -110,7 +91,9 @@
     </section>
 
     <footer>
+        <h1>YOU CAN REACH ME</h1>
         
     </footer>
+
 </body>
 </html>
