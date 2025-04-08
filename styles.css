@@ -125,6 +125,58 @@ footer {
     font-weight: bold;
 }
 
+
+/* Container for Other Projects */
+.other-projects-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Adds space between cards */
+    padding: 40px 20px;
+}
+
+/* Card styling for each video */
+.other-project-card {
+    background: rgba(9, 9, 9, 0.695);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 300px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.other-project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive video */
+.other-project-card video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Section styling */
+#other-projects {
+    text-align: center;
+    padding: 60px 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+#other-projects h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+
+
 /* -------------------
    Responsive Design
 ---------------------- */
