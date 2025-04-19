@@ -10,3 +10,26 @@ document.querySelectorAll("nav ul li a").forEach(anchor => {
         });
     });
 });
+
+
+
+
+
+function openModal(videoSrc) {
+    const modal = document.getElementById("videoModal");
+    const modalVideo = document.getElementById("modalVideo");
+
+    modal.style.display = "block";
+    modalVideo.src = videoSrc;
+    modalVideo.play();
+}
+
+function closeModal() {
+    const modal = document.getElementById("videoModal");
+    const modalVideo = document.getElementById("modalVideo");
+
+    modal.style.display = "none";
+    modalVideo.pause();
+    modalVideo.src = ""; // Reset source to stop playback
+}
+

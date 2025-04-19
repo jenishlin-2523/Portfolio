@@ -39,8 +39,8 @@
       </script>
 
     <section id="home">
-        <h2>Welcome to My Portfolio</h2>
-        <p>I am a passionate AI & Data Science student and a developer working on simple projects.</p>
+        <h2>Welcome to my <span>Portfolio</span></h2>
+        <p>"AI & Data Science enthusiast and developer with hands-on experience building practical projects."</p>
     </section>
 
     <section id="projects">
@@ -60,6 +60,15 @@
                 <a href="https://shoe-store-nine-psi.vercel.app/" class="btn">Visit Webpage</a>
                 <p><a href="https://www.figma.com/proto/ujzteFL00FnP5l1WSXzP2u/Kicks---Shoes-eCommerce-website-and-admin-MVP--Community-?node-id=38-480&p=f&t=S3m0pwZrrk15mTn5-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" class="btn">Visit Figma</a></p>
             </div>
+
+            <div class="project-card">
+                <img src="logos/project3.png" alt="Project 2">
+                <h3>Store Management Dashboard</h3> 
+                <p>Store Management Admin Dashboard built with React.js for efficient and seamless e-commerce management </p>
+                <a href="https://store-management-ruby.vercel.app/" class="btn">Visit Webpage</a>
+                <p><a href="" class="btn">Visit Figma</a></p>
+            </div>
+            
         </div>
     </section>
 
@@ -96,35 +105,79 @@
     <section id="other-projects">
         <h2>VFX & 3d Rendering</h2>
         <div class="other-projects-container">
-            <div class="other-project-card">
-                <video src="videos/vid1.mkv" autoplay loop muted></video>
-            </div>
-            <div class="other-project-card">
-                <video src="videos/vid2.mkv" autoplay loop muted></video>
-            </div>
-            <div class="other-project-card">
-                <video src="videos/vid3.mp4" autoplay loop muted></video>
-            </div>
-            <div class="other-project-card">
-                <video src="videos/vid4.mp4" autoplay loop muted></video>
-            </div>
-            <div class="other-project-card">
-                <video src="videos/vid5.mp4" autoplay loop muted></video>
-            </div>
-            <div class="other-project-card">
-                <video src="videos/vid6.mp4" autoplay loop muted></video>
-            </div>
-            <div class="other-project-card">
-                <video src="videos/vid7.mp4" autoplay loop muted></video>
-            </div>
+            <!-- Video Cards -->
+<div class="other-project-card">
+    <video src="videos/vid1.mkv" autoplay loop muted onclick="openModal(this.src)"></video>
+    <p>VFX</p>
+</div>
+<div class="other-project-card">
+    <video src="videos/vid2.mkv" autoplay loop muted onclick="openModal(this.src)"></video>
+    <p>VFX</p>
+</div>
+<div class="other-project-card">
+    <video src="videos/vid3.mp4" autoplay loop muted onclick="openModal(this.src)"></video>
+    <p>VFX</p>
+</div>
+<div class="other-project-card">
+    <video src="videos/vid4.mp4" autoplay loop muted onclick="openModal(this.src)"></video>
+    <p>Ad for iPhone</p>
+</div>
+<div class="other-project-card">
+    <video src="videos/vid5.mp4" autoplay loop muted onclick="openModal(this.src)"></video>
+    <p>Ad for Perfume</p>
+</div>
+<div class="other-project-card">
+    <video src="videos/vid6.mp4" autoplay loop muted onclick="openModal(this.src)"></video>
+    <p>Intro vid for ZionStar pvt ltd</p>
+</div>
+<div class="other-project-card">
+    <video src="videos/vid7.mp4" autoplay loop muted onclick="openModal(this.src)"></video>
+    <p>Short Film</p>
+</div>
+
+<!-- Modal -->
+<div id="videoModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <video id="modalVideo" controls autoplay loop></video>
+</div>
+
+            
         </div>
     </section>
     
+    <section id="other-project">
+        <h2>Python Tools and AI Tools </h2>
+        <div class="other-projects-container">
+            <!-- Your Video Card -->
+            <div class="other-project-card">
+                <video src="videos/vid8.mp4" autoplay loop muted onclick="openModal(this.src)"></video>
+                <p>Motion tracking technology used to create a subway surface simulation </p>
+            </div>
+
+            <div class="other-project-card">
+                <video src="videos/vid9.mp4" autoplay loop muted onclick="openModal(this.src)"></video>
+                <p>AI-powered quiz generator for staff and students to save time and reduce workload </p>
+            </div>
+
+            <div class="other-project-card">
+                <video src="videos/vid10.mp4" autoplay loop muted onclick="openModal(this.src)"></video>
+                <p>Python-based PPT generator for churches to save time creating song and verse presentations </p>
+            </div>
+
+
+        <!-- Modal Structure -->
+        <div id="videoModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <video id="modalVideo" controls autoplay loop></video>
+        </div>
+        </div>
+    </section>
 
     <section id="contact">
         <h2>Contact Me</h2>
         <p>Email: <a href="mailto:jenishlinb@gmail.com">jenishlinb@gmail.com</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/jenishlin-brisho-88aa44291/">linkedin.com/in/Jenishlin</a></p>
+        <p>WhatsApp: <a href="https://wa.me/917418932321" target="_blank">7418932321</a></p>
     </section>
 
     <footer>
